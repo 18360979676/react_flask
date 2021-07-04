@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# C extensions
+*.so
+
+# Distribution / packaging
+frontend/build/
+frontend/node_modules/
+
+.vscode/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# Environments
+.env
+env/
+
+/doc/Fllask_1/explore-flask.pdf
+/doc/Fllask_1/The Flask Mega 中文版.pdf
+/doc/Fllask_2/explore-flask.pdf
+/doc/Fllask_2/The Flask Mega 中文版.pdf

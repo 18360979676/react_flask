@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+}
+body{
+    /* 先在父元素上设置grid布局 */
+    /* display: grid;
+    grid: var(--居中); */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    background: #000;
+}
+#root{
+    /* 指定子元素在中心位置 */
+    /* grid-area: 中; */
+
+    /* 不设置子元素宽度和高度，由内部内容撑开 */
+    margin: auto;
+    /* 给一个好看的背景色 */
+    background: var(--极光绿);
+}
+.ul{
+    position: relative;
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    list-style: none;
+    overflow: hidden;
+}
+.ul:first-of-type{
+    padding-bottom: 0;
+}
+.ul:last-of-type{
+    padding-top: 0;
+    /* margin-top: -2px;
+    animation: container-move 1s 1.2s forwards; */
+}
+.harmony{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 70px;
+    height: 70px;
+    border: 15px solid white;
+    border-radius: 50%;
+    transform: translateY(50%);
+    box-shadow: 0 0 6px white, inset 0 0 6px white;
+    animation: move 1.2s forwards;
+}
+.ul:last-of-type > .harmony{
+    top: auto;
+    bottom: 10px;
+    transform: translateY(-50%);
+    filter: url(#blur);
+}
+svg{
+    width: 0;
+    height: 0;
+}
+@keyframes move{
+    to{
+        transform: none;
+    }
+}
+/* @keyframes container-move{
+    to{
+        margin-top: 0;
+    }
+} */
